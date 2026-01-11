@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alona — Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <div class="sig">Alona</div>
+        <div class="sub">ceramics</div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Studio</a>
+        <a href="shop.html" aria-current="page">Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <div class="container shop-grid">
+        <article class="panel hero-letter">
+          <div class="kicker">Available pieces</div>
+          <h1 class="hello">Shop</h1>
+          <p class="hero-line">A small list for now — growing with each firing.</p>
+
+          <hr class="rule" />
+
+          <div class="chips">
+            <span class="chip"><span class="dot sage"></span> made by hand</span>
+            <span class="chip"><span class="dot slate"></span> small batches</span>
+            <span class="chip"><span class="dot clay"></span> earthy glazes</span>
+          </div>
+
+          <hr class="rule" />
+          <p class="small">
+            To purchase: email me the item name (or add Stripe/Shopify later).
+          </p>
+        </article>
+
+        <article class="panel hero-letter">
+          <div class="kicker">Notes</div>
+          <p class="hero-line" style="margin-bottom:10px;">
+            Each piece is slightly different — that’s the point.
+          </p>
+          <hr class="rule" />
+          <p class="small" style="margin:0;">
+            Add shipping/care details here when you’re ready.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Items</h2>
+          <div class="sigline">available now</div>
+        </div>
+
+        <div class="items" aria-label="Shop items list">
+          <article class="card">
+            <picture>
+                <source srcset="images/item-tumbler.webp" type="image/webp" />
+                <img src="images/item-tumbler.jpg" alt="A minimal ceramic mug in soft light" />
+            </picture>
+            <div class="card-body">
+              <h3 class="card-title">Minimal Mug</h3>
+              <p class="meta">stoneware • satin glaze • 10–12 oz</p>
+              <div class="price-row">
+                <div class="price">$28</div>
+                <div class="badge">small batch</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+             <picture>
+                <source srcset="images/item-bowl1.webp" type="image/webp" />
+                <img src="images/item-bowl1.jpg" alt="A simple ceramic plate with a clean rim" />
+            </picture>
+            <div class="card-body">
+              <h3 class="card-title">Small Plate</h3>
+              <p class="meta">stoneware • matte finish • 7–8 in</p>
+              <div class="price-row">
+                <div class="price">$22</div>
+                <div class="badge">everyday</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <picture>
+                <source srcset="images/item-bowl2.webp" type="image/webp" />
+                <img src="images/item-bowl2.jpg" alt="A simple ceramic plate with a clean rim" />
+            </picture>
+            <div class="card-body">
+              <h3 class="card-title">Everyday Bowl</h3>
+              <p class="meta">stoneware • smooth rim • 5–6 in</p>
+              <div class="price-row">
+                <div class="price">$24</div>
+                <div class="badge">hand-finished</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <picture>
+                <source srcset="images/item-bowl2.webp" type="image/webp" />
+                <img src="images/item-bowl2.jpg" alt="A simple ceramic plate with a clean rim" />
+            </picture>
+            <div class="card-body">
+              <h3 class="card-title">Coming soon</h3>
+              <p class="meta">new pieces appear after each firing</p>
+              <div class="price-row">
+                <div class="price">—</div>
+                <div class="badge">next drop</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="thanks">Thank you</p>
+        <p class="small">If you want first access to new pieces, email me.</p>
+      </div>
+
+      <div class="contact">
+        <div class="kicker">Contact</div>
+        <p style="margin:8px 0 0;">
+          <a href="mailto:krutko.alona@gmail.com">krutko.alona@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
