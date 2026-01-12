@@ -127,8 +127,16 @@ a:focus-visible, button:focus-visible{
   border-color: color-mix(in srgb, var(--sage) 40%, var(--rule));
   background: color-mix(in srgb, rgba(255,255,255,0.55) 70%, rgba(63,91,83,0.10));
 }
+.outgoing-icon {
+  margin-left: -4px;
+  margin-top: 2px;
+  transition: transform var(--transition-animation);
+}
+.nav-instagram:hover .outgoing-icon {
+  transform: translate(5px, -5px);
+}
 
-/* ---- Hero (more visual, less text) ---- */
+/* ---- Hero ---- */
 .hero{
   padding: 28px 0 18px;
 }
