@@ -90,11 +90,27 @@ a:focus-visible, button:focus-visible{
   gap: 16px;
 }
 
-.brand{
-  display:flex;
-  align-items:baseline;
+.brand {
+  display: inline-flex;
+  align-items: center;
   gap: 10px;
+  text-decoration: none;
+  color: inherit;
 }
+
+.brand-icon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.75;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+
 .brand .sig{
   font-family: "Allura", "Great Vibes", cursive;
   font-size: 1.95rem;
