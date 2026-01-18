@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-tight-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-tight-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-tight-192.png">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -16,13 +19,21 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <div class="sig">Alona</div>
-        <div class="sub">ceramics</div>
+      <img
+  src="./images/favicon-tight-192.png"
+  class="brand-icon"
+  alt=""
+  aria-hidden="true"
+/>
+  <div class="brand-text">
+    <div class="sig">Alona</div>
+    <div class="sub">ceramics</div>
+  </div>
       </a>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="index.html" aria-current="page">Artist</a>
-        <a href="shop.html">Shop</a>
+        <a href="index.html">Artist</a>
+        <a href="shop.html" aria-current="page">Shop</a>
         <a 
           href="https://www.instagram.com/alonaceramics"
           target="_blank"
