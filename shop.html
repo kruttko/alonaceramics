@@ -1,180 +1,263 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alona — Shop</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alona Ceramics — Shop</title>
+    <meta
+      name="description"
+      content="Ceramics shop — mugs, bowls, plates, and small objects."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-tight-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-tight-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-tight-192.png">
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html">
-      <img
-  src="./images/favicon-tight-192.png"
-  class="brand-icon"
-  alt=""
-  aria-hidden="true"
-/>
-  <div class="brand-text">
-    <div class="sig">Alona</div>
-    <div class="sub">ceramics</div>
-  </div>
-      </a>
-
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Artist</a>
-        <a href="shop.html" aria-current="page">Shop</a>
-        <a 
-          href="https://www.instagram.com/alonaceramics"
-          target="_blank"
-          rel="noopener"
-          class="nav-instagram"  
-        >
-        Instagram
-        <img
-          src="./images/arrow.svg"
-          class="outgoing-icon"
-          width="15"
-          height="15"
-          alt=""
-          ria-hidden="true"
-        />
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="shop-hero">
-      <div class="container shop-grid">
-        <article class="panel hero-letter">
-          <div class="kicker">Available pieces</div>
-          <h1 class="hello">Shop</h1>
-          <p class="hero-line">A small list for now — growing with each firing.</p>
-
-          <hr class="rule" />
-
-          <div class="chips">
-            <span class="chip"><span class="dot sage"></span> made by hand</span>
-            <span class="chip"><span class="dot slate"></span> small batches</span>
-            <span class="chip"><span class="dot clay"></span> earthy glazes</span>
+    <header class="header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html">
+          <img
+            src="./images/favicon-tight-192.png"
+            class="brand-icon"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="brand-text">
+            <div class="sig">Alona</div>
+            <div class="sub">ceramics</div>
           </div>
+        </a>
 
-          <hr class="rule" />
-          <p class="small">
-            To purchase: email me the item name (or add Stripe/Shopify later).
-          </p>
-        </article>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav-link" href="index.html">ABOUT</a>
+          <a class="nav-link is-active" href="shop.html">SHOP</a>
+          <a class="nav-link" href="index.html#contact">CONTACT</a>
+        </nav>
 
-        <article class="panel hero-letter">
-          <div class="kicker">Notes</div>
-          <p class="hero-line" style="margin-bottom:10px;">
-            Each piece is slightly different — that’s the point.
-          </p>
-          <hr class="rule" />
-          <p class="small" style="margin:0;">
-            Add shipping/care details here when you’re ready.
-          </p>
-        </article>
+        <a
+          class="nav-link subtle"
+          href="https://www.instagram.com/alonaceramics"
+          aria-label="Instagram link"
+          >INSTAGRAM</a
+        >
       </div>
-    </section>
+    </header>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Items</h2>
-          <div class="sigline">available now</div>
+    <main id="main" class="wrap">
+      <section class="block">
+        <div class="grid">
+          <h1 class="title">Shop</h1>
+          <div class="prose">
+            <p>
+              I'm releasing in small batches. </br> Each piece is
+              <span>handmade</span>; slight variation in shape and glaze is part
+              of the work.
+            </p>
+            <p class="meta">
+              To sell directly, link these cards to Etsy/Shopify product pages
+              (or add a checkout button).
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div class="items" aria-label="Shop items list">
-          <article class="card">
-            <picture>
-                <source srcset="images/item-tumbler.webp" type="image/webp" />
-                <img src="images/item-tumbler.jpg" alt="A minimal ceramic mug in soft light" />
-            </picture>
-            <div class="card-body">
-              <h3 class="card-title">Minimal Mug</h3>
-              <p class="meta">stoneware • satin glaze • 10–12 oz</p>
-              <div class="price-row">
-                <div class="price">$28</div>
-                <div class="badge">small batch</div>
+      <section class="block">
+        <div class="products">
+          <article class="product">
+            <div class="product-media">
+              <img
+                src="images/bottle.jpg"
+                alt="Stone grey mug"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Stone Grey Mug</h3>
+                <p class="price">$48</p>
               </div>
+              <p class="desc">
+                Matte exterior, satin liner. Comfortable handle.
+              </p>
+              <a class="link" href="#">View</a>
             </div>
           </article>
 
-          <article class="card">
-             <picture>
-                <source srcset="images/item-bowl1.webp" type="image/webp" />
-                <img src="images/item-bowl1.jpg" alt="A simple ceramic plate with a clean rim" />
-            </picture>
-            <div class="card-body">
-              <h3 class="card-title">Small Plate</h3>
-              <p class="meta">stoneware • matte finish • 7–8 in</p>
-              <div class="price-row">
-                <div class="price">$22</div>
-                <div class="badge">everyday</div>
+          <article class="product">
+            <div class="product-media">
+              <img src="images/bowl.jpg" alt="Warm sand bowl" loading="lazy" />
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Warm Sand Bowl</h3>
+                <p class="price">$62</p>
               </div>
+              <p class="desc">Soft speckle, carved foot, glossy liner.</p>
+              <a class="link" href="#">View</a>
             </div>
           </article>
 
-          <article class="card">
-            <picture>
-                <source srcset="images/item-bowl2.webp" type="image/webp" />
-                <img src="images/item-bowl2.jpg" alt="A simple ceramic plate with a clean rim" />
-            </picture>
-            <div class="card-body">
-              <h3 class="card-title">Everyday Bowl</h3>
-              <p class="meta">stoneware • smooth rim • 5–6 in</p>
-              <div class="price-row">
-                <div class="price">$24</div>
-                <div class="badge">hand-finished</div>
-              </div>
+          <article class="product">
+            <div class="product-media">
+              <img
+                src="images/mug1.jpg"
+                alt="Deep umber plate"
+                loading="lazy"
+              />
             </div>
-          </article>
-
-          <article class="card">
-            <picture>
-                <source srcset="images/item-bowl2.webp" type="image/webp" />
-                <img src="images/item-bowl2.jpg" alt="A simple ceramic plate with a clean rim" />
-            </picture>
-            <div class="card-body">
-              <h3 class="card-title">Coming soon</h3>
-              <p class="meta">new pieces appear after each firing</p>
-              <div class="price-row">
-                <div class="price">—</div>
-                <div class="badge">next drop</div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Deep Umber Plate</h3>
+                <p class="price">$54</p>
               </div>
+              <p class="desc">Gloss rim, matte break, minimal profile.</p>
+              <a class="link" href="#">View</a>
             </div>
           </article>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="thanks">Thank you</p>
-        <p class="small">If you want first access to new pieces, email me.</p>
-      </div>
 
-      <div class="contact">
-        <div class="kicker">Contact</div>
-        <p style="margin:8px 0 0;">
-          <a href="mailto:krutko.alona@gmail.com">krutko.alona@gmail.com</a>
-        </p>
-      </div>
-    </div>
-  </footer>
-</body>
+
+
+
+
+      <section class="block">
+        <div class="products">
+          <article class="product">
+            <div class="product-media">
+              <img
+                src="images/bottle.jpg"
+                alt="Stone grey mug"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Stone Grey Mug</h3>
+                <p class="price">$48</p>
+              </div>
+              <p class="desc">
+                Matte exterior, satin liner. Comfortable handle.
+              </p>
+              <a class="link" href="#">View</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media">
+              <img src="images/bowl.jpg" alt="Warm sand bowl" loading="lazy" />
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Warm Sand Bowl</h3>
+                <p class="price">$62</p>
+              </div>
+              <p class="desc">Soft speckle, carved foot, glossy liner.</p>
+              <a class="link" href="#">View</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media">
+              <img
+                src="images/mug1.jpg"
+                alt="Deep umber plate"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Deep Umber Plate</h3>
+                <p class="price">$54</p>
+              </div>
+              <p class="desc">Gloss rim, matte break, minimal profile.</p>
+              <a class="link" href="#">View</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="products">
+          <article class="product">
+            <div class="product-media">
+              <img
+                src="images/bottle.jpg"
+                alt="Stone grey mug"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Stone Grey Mug</h3>
+                <p class="price">$48</p>
+              </div>
+              <p class="desc">
+                Matte exterior, satin liner. Comfortable handle.
+              </p>
+              <a class="link" href="#">View</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media">
+              <img src="images/bowl.jpg" alt="Warm sand bowl" loading="lazy" />
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Warm Sand Bowl</h3>
+                <p class="price">$62</p>
+              </div>
+              <p class="desc">Soft speckle, carved foot, glossy liner.</p>
+              <a class="link" href="#">View</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media">
+              <img
+                src="images/mug1.jpg"
+                alt="Deep umber plate"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3 class="product-title">Deep Umber Plate</h3>
+                <p class="price">$54</p>
+              </div>
+              <p class="desc">Gloss rim, matte break, minimal profile.</p>
+              <a class="link" href="#">View</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+      <section class="block">
+        <div class="notice">
+          <p>
+            Want this to be a real shop? Tell me what platform you’ll use (Etsy
+            / Shopify / Squarespace / “DM to buy”) and I’ll wire it correctly.
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="y"></span> ALONA CERAMICS</p>
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>

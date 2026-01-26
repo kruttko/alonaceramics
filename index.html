@@ -1,171 +1,116 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alona — Ceramics</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alona Ceramics — About</title>
+    <meta
+      name="description"
+      content="Alona Ceramics — ceramics, glazing process, materials, and studio notes."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Fauna+One&family=Fugaz+One&family=Lancelot&family=Niconne&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Gloria+Hallelujah&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-tight-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-tight-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-tight-192.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href=".images/favicon-tight-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href=".images/favicon-tight-192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href=".images/favicon-tight-256.png"
+    />
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html">
-      <img
-  src="./images/favicon-tight-192.png"
-  class="brand-icon"
-  alt=""
-  aria-hidden="true"
-/>
-  <div class="brand-text">
-    <div class="sig">Alona</div>
-    <div class="sub">ceramics</div>
-  </div>
-      </a>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html" aria-current="page">Artist</a>
-        <a href="shop.html">Shop</a>
-        <a 
-          href="https://www.instagram.com/alonaceramics"
-          target="_blank"
-          rel="noopener"
-          class="nav-instagram"  
-        >
-        Instagram
-        <img
-          src="./images/arrow.svg"
-          class="outgoing-icon"
-          width="15"
-          height="15"
-          alt=""
-          ria-hidden="true"
-        />
+    <header class="header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html">
+          <img
+            src="./images/favicon-tight-192.png"
+            class="brand-icon"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="brand-text">
+            <div class="sig">Alona</div>
+            <div class="sub">ceramics</div>
+          </div>
         </a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-wrap">
-        <article class="panel hero-letter">
-          <h1 class="hello">Hello, I’m Alona.</h1>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav-link is-active" href="index.html">ABOUT</a>
+          <a class="nav-link" href="shop.html">SHOP</a>
+          <a class="nav-link" href="#contact">CONTACT</a>
+        </nav>
 
-          <p class="hero-line">
-            I make quiet, minimal ceramics — pieces meant for daily rituals.
-          </p>
-
-          <hr class="rule" />
-
-          <div class="chips" aria-label="Materials and mood chips">
-            <span class="chip"><span class="dot clay"></span> clay • stoneware</span>
-            <span class="chip"><span class="dot slate"></span> glazes • soft blue-gray</span>
-            <span class="chip"><span class="dot sage"></span> mood • calm, grounded</span>
-          </div>
-
-          <hr class="rule" />
-
-          <p class="small">
-            Looking for available pieces? Visit the
-            <a href="shop.html" style="text-decoration:underline; text-underline-offset:3px;">shop</a>.
-          </p>
-        </article>
-
-        <aside class="hero-photo" aria-label="Hero photo">
-          <img src="images/hero.jpg" alt="Alona working on the pottery wheel" />
-        </aside>
+        <a
+          class="nav-link subtle"
+          href="https://www.instagram.com/alonaceramics"
+          aria-label="Instagram link"
+          >INSTAGRAM</a
+        >
       </div>
-    </section>
+    </header>
 
-    <!-- STORY (short + stylish) -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">The story</h2>
-          <div class="sigline">why clay</div>
+    <main id="main" class="wrap">
+      <!-- Hero image -->
+      <section class="block hero">
+        <div class="media">
+          <!-- Replace this with your own image -->
+          <img src="images/hero.jpg" alt="Me" />
         </div>
+        <p class="caption">this is me</p>
+      </section>
 
-        <div class="story">
-          <div class="panel story-card">
-            <div class="em">When it started</div>
-            <h3>Pottery since spring <strong>2025</strong></h3>
+      <!-- Bio / About -->
+      <section class="block">
+        <div class="grid">
+          <h1 class="title">About</h1>
+
+          <div class="prose">
             <p>
-              I began with curiosity — the wheel, the rhythm, the surprise of a shape appearing under my hands.
+              Hi — I’m <strong>Alona Krutko</strong>. I make functional ceramics
+              with a quiet, modern silhouette and tactile details (subtle
+              carving, matte breaks, soft edges).
             </p>
-          </div>
 
-          <div class="panel story-card">
-            <div class="em">What pulled me in</div>
-            <h3>Control, then surrender</h3>
             <p>
-              Clay teaches patience. You guide it… and it guides you back. That’s the part I love.
+              My studio work focuses on calm, neutral surfaces — warm beige,
+              stone grey, and deep brown — inspired by wood, rock, and winter
+              light.
+            </p>
+
+            <p class="meta">
+              Based in: <span class="pill">Seattle, WA</span><br />
+              Clay body: <span class="pill">Stoneware</span
+              ><span class="pill">Earthware</span><br />
+              Firing: <span class="pill">Cone 4</span
+              ><span class="pill">Cone 5</span><span class="pill">Cone 6</span
+              ><br />
+              Glazes: <span class="pill">Mayco</span
+              ><span class="pill">Speedball</span>
             </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- STUDIO GRID -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Studio glimpses</h2>
-          <div class="sigline">small moments</div>
-        </div>
-
-        <div class="gallery">
-          <figure>
-            <picture>
-                <source srcset="images/studio-1.webp" type="image/webp" />
-                <img src="images/studio-1.jpg" alt="Pottery piece on a table in natural light" />
-            </picture>
-            <figcaption>soft edges • everyday use</figcaption>
-          </figure>
-
-          <figure>
-            <picture>
-                <source srcset="images/studio-2.webp" type="image/webp" />
-                <img src="images/studio-2.jpg" alt="Hands shaping clay on a pottery wheel" />
-            </picture>
-            <figcaption>glaze • texture • quiet detail</figcaption>
-          </figure>
-
-          <figure>
-            <picture>
-                <source srcset="images/studio-3.webp" type="image/webp" />
-                <img src="images/studio-3.jpg" alt="Finished ceramics arranged in a minimal composition" />
-            </picture>            
-            <figcaption>carving • rhythm • repetition</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="thanks">Thank you</p>
-        <p class="small">New pieces appear as they’re finished — small batches, made slowly.</p>
-      </div>
-
-      <div class="contact">
-        <div class="kicker">Contact</div>
-        <p style="margin:8px 0 0;" class="mail">
-          <a href="mailto:krutko.alona@gmail.com">krutko.alona@gmail.com</a>
-        </p>
-      </div>
-    </div>
-  </footer>
-</body>
+      </section>
+    </main>
+  </body>
 </html>
