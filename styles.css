@@ -2,7 +2,7 @@
   --bg: #F6F5F2;
   --paper: #fcfcfc;
 
-  --text: #252a27;
+  --text: #252c28;
   --muted: rgb(125, 141, 128);
 
   --line: rgba(60, 64, 60, 0.12);
@@ -12,7 +12,7 @@
   --ash: #8b918c;
   --wood: #8a6a50;
 
-  --max: 1100px;
+  --max: 1600px;
 
   --shadow: 0 18px 50px rgba(20, 22, 20, 0.08);
 
@@ -70,13 +70,13 @@ a {
   padding: 0 22px;
 }
 
-/* Header (simple, Format-like) */
+/* Header */
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(246, 243, 238, 0.86);
-  backdrop-filter: blur(10px);
+  background: rgba(244, 242, 239, 0.86);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
 }
 
