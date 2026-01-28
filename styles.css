@@ -1,24 +1,17 @@
 :root {
   --bg: #F6F5F2;
   --paper: #fcfcfc;
-
   --text: #252c28;
   --muted: rgb(125, 141, 128);
-
   --line: rgba(60, 64, 60, 0.12);
-
   --beige: #ded2c1;
   --stone: #bdb9b2;
   --ash: #8b918c;
   --wood: #8a6a50;
-
   --max: 1600px;
-
   --shadow: 0 18px 50px rgba(20, 22, 20, 0.08);
-
   --h1: clamp(30px, 4.2vw, 44px);
   --h2: 16px;
-
   --radius: 10px;
 }
 
@@ -35,10 +28,7 @@ body {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(900px 500px at 70% -10%, rgba(223, 212, 203, 0.1), transparent 60%),
-    radial-gradient(700px 450px at 15% 10%, rgba(228, 225, 219, 0.12), transparent 60%),
-    linear-gradient(180deg, #F6F5F2, var(--bg));
+  background: radial-gradient(900px 500px at 70% -10%, rgba(223, 212, 203, 0.1), transparent 60%), radial-gradient(700px 450px at 15% 10%, rgba(228, 225, 219, 0.12), transparent 60%), linear-gradient(180deg, #F6F5F2, var(--bg));
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   line-height: 1.65;
@@ -115,23 +105,17 @@ a {
 }
 
 .brand-text .sig {
-  font-family: "Fraunces", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: italic;
-  font-variation-settings:
-    "SOFT" 0,
-    "WONK" 0;
+  font-family: "WindSong", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
 }
 
 .brand-text .sub {
-  font-family: "Fraunces", serif;
+  font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-variation-settings:
-    "SOFT" 0,
-    "WONK" 0;
   font-size: 12px;
 }
 
@@ -172,18 +156,36 @@ a {
   padding-top: 20px;
 }
 
-.media {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+/* Hero media frame */
+.hero .media {
+  height: 520px;
+  /* fixed window to scroll “through” */
+  position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
-.media img {
+/* Image is taller than frame so it can move */
+.hero .media img {
   width: 100%;
-  height: auto;
+  height: 220%;
+  /* IMPORTANT: taller than the frame */
+  object-fit: cover;
   display: block;
+  transform: translateY(-10%);
+  /* start slightly up */
+  will-change: transform;
+}
+
+.hero .media {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .hero .media {
+    height: 360px;
+  }
 }
 
 .caption {
@@ -208,9 +210,7 @@ a {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: italic;
-  font-variation-settings:
-    "SOFT" 0,
-    "WONK" 0;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
   letter-spacing: -0.02em;
 }
 
