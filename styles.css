@@ -222,7 +222,85 @@ a {
   color: var(--muted);
 }
 
-.prose p {
+.nav-links{
+  display:flex;
+  gap: 18px;
+  align-items:center;
+  font-family: "Lancelot", ui-serif;
+  font-size: 1.2rem;
+}
+.nav-links a{
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.nav-links a:hover{
+  border-color: var(--rule);
+  background: rgba(255,255,255,0.45);
+}
+.nav-links a[aria-current="page"]{
+  border-color: color-mix(in srgb, var(--sage) 40%, var(--rule));
+  background: color-mix(in srgb, rgba(255,255,255,0.55) 70%, rgba(63,91,83,0.10));
+}
+.outgoing-icon {
+  margin-left: -4px;
+  margin-top: 2px;
+  transition: transform var(--transition-animation);
+}
+.nav-instagram:hover .outgoing-icon {
+  transform: translate(5px, -5px);
+}
+
+/* ---- Hero ---- */
+.hero{
+  padding: 28px 0 18px;
+}
+
+.hero-wrap{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.panel{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.62), rgba(255,255,255,0.42)),
+    radial-gradient(900px 600px at 10% 10%, rgba(176,122,85,0.10), transparent 55%),
+    var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius2);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-letter{
+  padding: 22px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hello{
+  font-family: "Breathing";
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: clamp(2.4rem, 4.2vw, 3.3rem);
+  margin: 0 0 6px;
+  color: color-mix(in srgb, var(--ink) 80%, var(--sage));
+}
+
+.hero-line{
+  font-size: 1.18rem;
   margin: 0 0 14px;
   max-width: 70ch;
 }
