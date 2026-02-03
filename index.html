@@ -49,51 +49,38 @@
             <div class="sub">ceramics</div>
           </div>
         </a>
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="nav-link is-active" href="index.html">ABOUT</a>
-          <a class="nav-link" href="shop.html">SHOP</a>
-          <a class="nav-link" href="#contact">CONTACT</a>
-        </nav>
-        <a
-          href="https://www.instagram.com/alonaceramics"
-          class="nav-link subtle"
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-        >
-          <img
-            src="/images/instagram-cropped.svg"
-            alt="Instagram"
-            width="70"
-            height="30"
-          />
-        </a>
+        <div class="header-right">
+          <nav class="nav" aria-label="Primary navigation">
+            <a class="nav-link is-active" href="index.html">ABOUT</a>
+            <a class="nav-link" href="shop.html">SHOP</a>
+            <a class="nav-link" href="#contact">CONTACT</a>
+          </nav>
+          <a
+            href="https://www.instagram.com/alonaceramics"
+            class="nav-link subtle nav-instagram"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <img
+              src="/images/instagram-cropped.svg"
+              alt="Instagram"
+              width="70"
+              height="30"
+            />
+          </a>
+        </div>
       </div>
     </header>
     <main id="main" class="wrap">
-      <section class="block">
-        <div class="grid">
-          <h1 class="title">About</h1>
+      <section class="block intro">
+        <div class="gridd">
+          <!-- <h1 class="title">About</h1> -->
           <div class="prose">
             <p>
-              Hi — I’m <strong>Alona Krutko</strong>. I make functional ceramics
+              Hi — I’m <strong class="hero-text">Alona Krutko</strong>. I make functional ceramics
               with a quiet, modern silhouette and tactile details (subtle
               carving, matte breaks, soft edges).
-            </p>
-            <p>
-              My studio work focuses on calm, neutral surfaces — warm beige,
-              stone grey, and deep brown — inspired by wood, rock, and winter
-              light.
-            </p>
-            <p class="meta">
-              Based in: <span class="pill">Seattle, WA</span><br />
-              Clay body: <span class="pill">Stoneware</span
-              ><span class="pill">Earthware</span><br />
-              Firing: <span class="pill">Cone 4</span
-              ><span class="pill">Cone 5</span><span class="pill">Cone 6</span
-              ><br />
-              Glazes: <span class="pill">Mayco</span
-              ><span class="pill">Speedball</span>
             </p>
           </div>
         </div>
@@ -101,7 +88,7 @@
 
       <section class="block hero">
         <div class="media">
-          <img src="images/hero.jpg" alt="Me" />
+          <img src="./images/hero.jpg" alt="Alona" />
         </div>
         <p class="caption">this is me</p>
       </section>
@@ -111,8 +98,10 @@
     <h2 class="subtitle">WORK</h2>
 
     <div>
-      <p class="meta" style="margin: 0 0 12px;">
-        <!-- A small selection — quiet silhouettes, soft edges, calm surfaces. -->
+      <p class="meta"> 
+        My studio work focuses on calm, neutral surfaces — warm beige,
+        stone grey, and deep brown — inspired by wood, rock, and winter
+        light.
       </p>
 
       <div class="work-collage" aria-label="Work photo collage">
@@ -148,6 +137,7 @@
       </section>
 
       <section class="block">
+        
         <div class="grid">
           <h1 class="subtitle">MATERIALS</h1>
           <div class="prose">
@@ -163,51 +153,64 @@
           </div>
         </div>
       </section>
+            <footer class="footer">
+        <p>© <span id="y"></span> ALONA CERAMICS</p>
+        <p class="meta">
+              Based in: <span class="pill">Seattle, WA</span><br />
+              Clay body: <span class="pill">Stoneware</span
+              ><span class="pill">Earthware</span><br />
+              Firing: <span class="pill">Cone 4</span
+              ><span class="pill">Cone 5</span><span class="pill">Cone 6</span
+              ><br />
+              Glazes: <span class="pill">Mayco</span
+              ><span class="pill">Speedball</span>
+            </p>
+      </footer>
     </main>
 
     <script>
-      // Ensure images and layout are loaded before measuring
-      window.addEventListener("load", () => {
-        const frame = document.querySelector(".hero .media");
-        if (!frame) return;
+  (() => {
+    const frame = document.querySelector(".hero .media");
+    const overlay = document.querySelector(".hero .media .parallax-overlay");
+    const img = frame && frame.querySelector("img");
+    if (!frame || !img) return;
 
-        // select image from the frame to be resilient to markup changes
-        const img = frame.querySelector("img");
-        if (!img) return;
+    function update() {
+      const rect = frame.getBoundingClientRect();
+      const vh = window.innerHeight;
 
-        let ticking = false;
+      const progress = (vh - rect.top) / (vh + rect.height);
+      const p = Math.max(0, Math.min(1, progress));
 
-        function update() {
+      // image parallax: move vertically (pixels)
+      const imgMove = (p - 0.5) * -140; // tweak magnitude as needed
+      img.style.transform = `translateY(${imgMove}px)`;
+
+      // subtle overlay drift for the frosted glass layer
+      if (overlay) {
+        const overlayY = (p - 0.5) * -60;
+        const overlayX = (p - 0.5) * 20;
+        overlay.style.transform = `translate(${overlayX}px, ${overlayY}px)`;
+      }
+    }
+
+    let ticking = false;
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          update();
           ticking = false;
+        });
+      }
+    }
 
-          const rect = frame.getBoundingClientRect();
-          const vh = window.innerHeight;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
+  })();
+</script>
 
-          // progress while element is around viewport
-          const progress = (vh - rect.top) / (vh + rect.height);
-
-          // clamp 0..1 so it behaves predictably
-          const p = Math.max(0, Math.min(1, progress));
-
-          // move range in px (increase to 40–80 if you want it more obvious)
-          const move = (p - 0.5) * 1000;
-
-          img.style.transform = `translateY(calc(-10% + ${move}px))`;
-        }
-
-        function onScroll() {
-          if (!ticking) {
-            ticking = true;
-            requestAnimationFrame(update);
-          }
-        }
-
-        window.addEventListener("scroll", onScroll, { passive: true });
-        window.addEventListener("resize", onScroll);
-        // run an initial update after load
-        update();
-      });
-    </script>
 
   </body>
 </html>

@@ -34,6 +34,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  font-size: xx-large;
   font-variation-settings:
     "SOFT" 50,
     "WONK" 0;
@@ -43,6 +44,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+p {
+  margin: 0 0 18px;
 }
 
 .skip {
@@ -78,10 +83,18 @@ a {
 
 .header-inner {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 14px;
   padding: 10px 0;
+}
+
+/* Right-side header group (nav + external link) */
+.header-right{
+  justify-self: end;
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
 
 .logo {
@@ -128,12 +141,12 @@ a {
 .nav {
   display: flex;
   gap: 18px;
-  justify-content: center;
+  justify-content: right;
 }
 
 .nav-link {
   letter-spacing: 0.14em;
-  font-size: 11px;
+  font-size: 13px;
   color: var(--muted);
   padding: 6px 0;
   border-bottom: 1px solid transparent;
@@ -158,41 +171,60 @@ a {
   padding: 34px 0;
 }
 
+/* .hero-text {
+  font-family: "WindSong", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+} */
+
 .hero {
   padding-top: 20px;
 }
 
-/* Hero media frame */
-.hero .media {
-  height: 650px;
-  /* fixed window to scroll “through” */
-  position: relative;
+.hero .media{
+  height: 620px;
   overflow: hidden;
+  position: relative;
   border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
-/* Image is taller than frame so it can move */
-.hero .media img {
+/* Image stays still */
+.hero .media img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* make image taller than the frame so it can translate for parallax */
+  top: -15%;
   width: 100%;
-  height: 100%;
-  /* IMPORTANT: taller than the frame */
+  height: 130%;
   object-fit: cover;
-  display: block;
-  transform: translateY(-10%);
-  /* start slightly up */
+  object-position: center top; /* keep face first */
   will-change: transform;
-  border-radius: inherit;
-  -webkit-border-radius: inherit;
-  mask-image: radial-gradient(
-    120% 100% at 50% 50%,
-    black 72%,
-    transparent 100%
-  );
-  -webkit-mask-image: radial-gradient(
-    120% 100% at 50% 50%,
-    black 72%,
-    transparent 100%
-  );
+  transform: translateY(0);
+}
+
+/* The moving “glass/blur” layer */
+.parallax-overlay{
+  position: absolute;
+  inset: -12%;
+  pointer-events: none;
+
+  /* frosted blur */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  /* soft veil so blur reads */
+  background: rgba(246,245,242,0.10);
+
+  /* organic spotlight shape */
+  mask-image: radial-gradient(55% 40% at 50% 35%, rgba(0,0,0,0.95), rgba(0,0,0,0.0) 72%);
+  -webkit-mask-image: radial-gradient(55% 40% at 50% 35%, rgba(0,0,0,0.95), rgba(0,0,0,0.0) 72%);
+
+  opacity: 0.95;
+  will-change: transform;
 }
 
 .hero .media {
@@ -222,6 +254,10 @@ a {
   align-items: start;
 }
 
+.block.intro {
+  padding-bottom: 0;
+}
+
 .title {
   margin: 0;
   font-size: var(--h1);
@@ -243,7 +279,7 @@ a {
 
 .nav-links{
   display:flex;
-  gap: 18px;
+  gap: 12px;
   align-items:center;
   font-family: "Lancelot", ui-serif;
   font-size: 1.2rem;
@@ -266,6 +302,13 @@ a {
   margin-top: 2px;
   transition: transform var(--transition-animation);
 }
+.nav-instagram {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 4%; 
+  padding-left: 6%;
+}
+
 .nav-instagram:hover .outgoing-icon {
   transform: translate(5px, -5px);
 }
@@ -327,6 +370,9 @@ a {
 .meta {
   font-size: 12px;
   color: var(--muted);
+  margin-bottom: 16px;
+  margin-top: 16px;
+
 }
 
 .pill {
@@ -398,7 +444,14 @@ a {
 
 .product-media.big-img {
   width: 100%;
-  height: 320px;
+  height: 1100px;
+  object-fit: fill;
+  display: block;
+}
+
+.product-media.big-img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
